@@ -19,63 +19,36 @@
     .hero{
       position:relative;
       min-height:100vh;
-      background:url('hero.jpg') center/cover no-repeat;
+      background:url('assets/hero.jpg') center/cover no-repeat;
       display:flex;flex-direction:column;justify-content:flex-end;
       color:#fff;
     }
-    .overlay{
-      position:absolute;inset:0;
-      background:rgba(0,0,0,0.55);
-    }
-    .hero-content{
-      position:relative;z-index:1;
-      padding:40px 20px 80px;
-      text-align:left;
-      max-width:1100px;margin:0 auto;
-    }
-    .header-top{
-      display:flex;align-items:center;gap:12px;margin-bottom:20px;
-    }
-    .header-top img{
-      width:50px;height:50px;object-fit:contain;border-radius:6px;background:#fff;
-    }
+    .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.55);}
+    .hero-content{position:relative;z-index:1;padding:40px 20px 80px;max-width:1100px;margin:0 auto;}
+    .header-top{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+    .header-top img{width:50px;height:50px;object-fit:contain;border-radius:6px;background:#fff;}
     .brand{font-weight:800;letter-spacing:4px;font-size:18px}
     .hero h1{font-size:3em;margin:0;font-weight:800}
     .hero p{font-size:1.2em;margin:10px 0 20px;color:var(--muted)}
-    .player-box{
-      background:rgba(0,0,0,0.7);
-      display:flex;align-items:center;gap:16px;
-      border-radius:12px;padding:14px;
-      max-width:700px;
-    }
-    .player-box img{
-      width:80px;height:80px;object-fit:cover;border-radius:8px
-    }
+    .player-box{background:rgba(0,0,0,0.7);display:flex;align-items:center;gap:16px;border-radius:12px;padding:14px;max-width:700px}
+    .player-box img{width:80px;height:80px;object-fit:cover;border-radius:8px}
     .player-info{flex:1}
     .player-info h3{margin:0;font-size:1.1em;font-weight:700}
     audio{width:100%}
-    /* Sections */
     .section{padding:60px 0}
     h2{margin:0 0 20px;font-size:1.6em}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
     .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.35)}
     .card .media{position:relative;aspect-ratio:16/9;overflow:hidden}
     .card .media img{width:100%;height:100%;object-fit:cover;display:block}
-    .play-btn{
-      position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-      width:60px;height:60px;border-radius:50%;
-      background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;
-      cursor:pointer;transition:background .3s;
-    }
-    .play-btn:hover{background:rgba(0,0,0,0.8)}
+    .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;cursor:pointer}
     .play-btn svg{fill:#fff;width:26px;height:26px}
     .card .body{padding:14px}
     .card h4{margin:0 0 6px;font-size:1.1em}
     .card p{margin:0;color:var(--muted);font-size:0.9em}
-    /* Testimonials */
     .testimonials-list{display:grid;gap:16px}
-    .testimonial{background:#fff;color:#000;padding:18px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.25);font-size:.95em}
-    /* CTA */
+    .testimonial{background:#fff;color:#000;padding:18px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.25);font-size:.95em;display:flex;align-items:center;gap:14px}
+    .testimonial img{width:60px;height:60px;border-radius:50%;object-fit:cover}
     .cta{text-align:center;padding:40px 0}
     .btn-big{background:var(--brand);color:#000;padding:14px 28px;border-radius:30px;font-weight:700;font-size:1.1em}
   </style>
@@ -85,19 +58,19 @@
     <div class="overlay"></div>
     <div class="hero-content">
       <div class="header-top">
-        <img src="https://via.placeholder.com/50x50.png?text=Logo" alt="Logo Placeholder">
+        <img src="assets/logo.png" alt="Logo">
         <div class="brand">SOUL SUPPORT</div>
       </div>
       <h1>Experience the Soul</h1>
       <p>Mixes, Videos & Real Stories</p>
 
       <div class="player-box">
-        <img src="https://via.placeholder.com/80x80.png?text=Mix" alt="Mix Thumbnail">
+        <img src="assets/mix1.jpg" alt="Wedding Mix Cover">
         <div class="player-info">
-          <h3>Live Wedding Mix – Summer 2024</h3>
-          <audio controls>
-            <source src="mix-summer-2024.mp3" type="audio/mpeg">
-            Dein Browser unterstützt Audio nicht.
+          <h3>Wedding Mix – Live</h3>
+          <audio controls preload="none">
+            <source src="assets/wedding-mix.mp3" type="audio/mpeg">
+            Dein Browser konnte die Audiodatei nicht laden. Prüfe den Pfad assets/wedding-mix.mp3
           </audio>
         </div>
       </div>
@@ -110,8 +83,8 @@
       <div class="grid">
         <div class="card">
           <div class="media">
-            <img src="https://via.placeholder.com/600x338?text=Bali+Sunset+Magic" alt="Bali Sunset Magic">
-            <div class="play-btn">
+            <img src="assets/mix1.jpg" alt="Bali Sunset Magic">
+            <div class="play-btn" title="Play">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
@@ -122,8 +95,8 @@
         </div>
         <div class="card">
           <div class="media">
-            <img src="https://via.placeholder.com/600x338?text=OWL+Manor+Party" alt="OWL Manor Party">
-            <div class="play-btn">
+            <img src="assets/mix2.jpg" alt="OWL Manor Party">
+            <div class="play-btn" title="Play">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
@@ -138,9 +111,18 @@
     <section class="section container">
       <h2>Testimonials</h2>
       <div class="testimonials-list">
-        <div class="testimonial">“Soul Support made our Bali wedding unforgettable!”<br>– Sarah & Ben, 2023</div>
-        <div class="testimonial">“High-end vibes, seamless flow – from ceremony to last track.”<br>– Lisa & Mark, 2024</div>
-        <div class="testimonial">“They packed the night in Bielefeld – pure energy and class.”<br>– Julia & Tim, 2023</div>
+        <div class="testimonial">
+          <img src="assets/testimonial1.jpg" alt="Sarah & Ben">
+          <div>“Soul Support made our Bali wedding unforgettable!”<br><strong>– Sarah & Ben, 2023</strong></div>
+        </div>
+        <div class="testimonial">
+          <img src="assets/testimonial2.jpg" alt="Lisa & Mark">
+          <div>“High-end vibes, seamless flow – from ceremony to last track.”<br><strong>– Lisa & Mark, 2024</strong></div>
+        </div>
+        <div class="testimonial">
+          <img src="assets/testimonial3.jpg" alt="Julia & Tim">
+          <div>“They packed the night in Bielefeld – pure energy and class.”<br><strong>– Julia & Tim, 2023</strong></div>
+        </div>
       </div>
     </section>
 
